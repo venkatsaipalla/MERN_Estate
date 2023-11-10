@@ -80,7 +80,9 @@ export default function Profile() {
         />
         <p className="text-sm self-center">
           {fileUploadError ? (
-            <span className="text-red-700">Error Image upload (image must be less than 2 mb)</span>
+            <span className="text-red-700">
+              Error Image upload (image must be less than 2 mb)
+            </span>
           ) : filePerc > 0 && filePerc < 100 ? (
             <span className="text-slate-700">{`Uploading ${filePerc}%`} </span>
           ) : filePerc == 100 && !fileUploadError ? (
@@ -111,11 +113,10 @@ export default function Profile() {
           update
         </button>
       </form>
+
       <div className="flex justify-between mt-5">
-        <div className="flex justify-between mt-5">
-          <span className="text-red-700 cursor-pointer">Delete account</span>
-          <span className="text-red-700 cursor-pointer">Sign out</span>
-        </div>
+        <span className="text-red-700 cursor-pointer">Delete account</span>
+        <span className="text-red-700 cursor-pointer">Sign out</span>
       </div>
     </div>
   );
