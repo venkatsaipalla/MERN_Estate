@@ -34,6 +34,9 @@ const userSlice = createSlice({
       state.loading = false;
       state.error = action.payload;
     },
+    deleteUserStart: (state) => {
+      state.loading = true;
+    },
     deleteUserFailure: (state, action) => {
       state.error = action.payload;
       state.loading = false;
@@ -42,9 +45,6 @@ const userSlice = createSlice({
       state.currentUser = null;
       state.loading = false;
       state.error = null;
-    },
-    deleteUserStart: (state) => {
-      state.loading = true;
     },
     signOutUserFailure: (state, action) => {
       state.error = action.payload;
